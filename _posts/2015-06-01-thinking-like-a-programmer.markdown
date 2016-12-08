@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Thinking like a programmer"
-date: 2016-03-13
+date: 2015-06-01
 
 ---
 
