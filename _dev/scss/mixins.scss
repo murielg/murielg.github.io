@@ -1,0 +1,108 @@
+.container-fluid {
+  padding: 0;
+}
+.row {
+  margin: 0;
+}
+.col-left {
+  width: 50%;
+  float: left;
+}
+.col-right{
+  width: 50%;
+  float: right;
+}
+@media (max-width: 767px) {
+  .col-left, .col-right {
+    float: none;
+    width: 100%;
+  }
+}
+.wrapper {
+  position: relative;
+}
+%unstyled-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+%transitions {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+%icons {
+  [class^=icon-], [class*=" icon-"] {
+    font-family: FontAwesome;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+%social{
+  .icon-twitter:before{content:"\f099"}
+  .icon-email:before{content:"\f003"}
+  .icon-print:before{content: "\f02f"}
+  .icon-github:before{content: "\f09b"}
+  .icon-stackoverflow:before{content: "\f16c"}
+
+}
+.center-align {
+  font-size: 0;
+  white-space: nowrap;
+  text-align: center;
+}
+.social {
+  @extend %unstyled-list;
+  li {
+    @extend %icons;
+    @extend %social;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+// mixins, animations, etc
+@mixin transition ($duration, $easing){
+  -webkit-transition: all $duration $easing;
+  -moz-transition: all $duration $easing;
+  -o-transition: all $duration $easing;
+  -ms-transition: all $duration $easing;
+  transition: all $duration $easing;
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@mixin animation($animation) {
+  -webkit-animation: #{$animation};
+  -moz-animation: #{$animation};
+  -ms-animation: #{$animation};
+  animation: #{$animation};
+}
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    @include transform(translate3d(100%, 0, 0));
+  }
+  100% {
+    opacity: 1;
+    @include transform(none);
+  }
+}

@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<section class="post">
+  <h1>
+    <aside>{{ page.date | date: "%b %-d, %Y" }}</aside>
+    {{ page.title }}
+  </h1>
+    
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+</section>
+
+<div class="navigation">
+  {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}">&laquo; Previous Post</a>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">Next Post &raquo;</a>
+  {% endif %}
+</div>

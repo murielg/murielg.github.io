@@ -6,3 +6,6 @@ Gemfile
 .lock
 .ruby-version
 _drafts/
+_site
+.sass-cache
+.jekyll-metadata
