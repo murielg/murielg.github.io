@@ -14,7 +14,7 @@
     "build": "npm run clean && npm run build:css && npm run build:js && npm run build:jekyll",
     "build:css": "node-sass --include-path node_modules/bourbon/app/assets/stylesheets/ $npm_package_config_theme/scss/style.scss --output-style compressed >  $npm_package_config_dist/css/style.css",
     "build:js": "browserify $npm_package_config_theme/js/index.js -d -p [minifyify --map $npm_package_config_theme/js/bundle.js.map --output $npm_package_config_dist/js/bundle.js.map] > $npm_package_config_dist/js/bundle.js",
-    "build:jekyll": "bundle exec jekyll build --incremental",
+    "build:jekyll": "bundle exec jekyll build",
     "watch:jekyll": "chokidar '*' 'index.html' '_includes/*.html' '_layouts/*.html' '_posts/*' -c 'npm run build:jekyll'",
     "watch:css": "chokidar '_dev/scss/**/*' -c 'npm run watch:css_site && browser-sync reload'",
     "watch:css_site": "node-sass --include-path node_modules/bourbon/app/assets/stylesheets/ --output-style compressed $npm_package_config_theme/scss/style.scss _site/assets/css/style.css",

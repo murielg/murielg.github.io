@@ -14,5 +14,6 @@ repository: murielg/murielg.github.io
 # Build settings
 permalink: pretty
 markdown: kramdown
+highlighter: rouge
 exclude: ["node_modules","package.json", "Rakefile","Gemfile", "Gemfile.lock"]
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"

@@ -11,8 +11,6 @@ date: 2016-03-13
  <footer><a href="https://medium.com/@brianleroux" target="_blank">@brianleroux</a></footer>
 </blockquote>
 
-## Some Background
-
 Browsers haven’t had a really good way of loading modules (not yet, at least, but let’s forget about ES6 for a minute). So developing large JavaScript applications, especially those that have many dependencies and intricacies, became a very challenging task. In true JavaScript fashion, there isn’t only one way to write modular code. The most well-known formats are AMD and CommonJS. AMD is more widely used in the browser, while CommonJS has mostly been used server-side. While I won’t go into detail about either of these formats, simply put, AMD and CommonJS are two different ways of bundling JavaScript with the goal of making it modular. AMD was eventually made popular by RequireJS, while CommonJS (or at least a version of it) was adopted by the Node community.
 
 CommonJS happens to have really simple syntax, and while it doesn’t naturally work in the browser like AMD does, this problem gets solved when you combine CommonJS with module bundlers such as Browserify or Webpack. But more on module bundlers later.
@@ -48,15 +46,15 @@ I will go over the steps of creating your own package.json, as well as writing a
  	
 * NPM comes installed with Node by default, but be sure you have the latest version.
 
-``` 
+~~~~~~~~
 sudo npm install npm -g 
-```
+~~~~~~~~
 
 * Now go to the root of your project and run the following command on your terminal:
 
-``` 
+~~~ 
 npm init
-```
+~~~
 
 
 * The command will start a utility that will walk you through setting up the initial package.json file. Feel free to change any of the values as you go along. Otherwise, press Enter three times. You will be able to change all of these values at a later time if needed.
@@ -64,7 +62,7 @@ npm init
 
 You should now have a package.json file that looks similar to this:
 
-```
+~~~
 {
   "name": "npm-is-awesome",
   "version": "1.0.0",
@@ -76,8 +74,7 @@ You should now have a package.json file that looks similar to this:
   "author": "Muriel Gonzalez",
   "license": "ISC"
 }
-
-```
+~~~
 
 * “Name” and “version” are the only two required properties. “Name” defines the name of your package/module. If publishing to the NPM ecosystem, this name must be unique.
 
@@ -96,7 +93,7 @@ You should now have a package.json file that looks similar to this:
 
 For the scripts we’ll write later to make sense, let’s make sure we are on the same page with the project’s file structure:
 
-```
+~~~
     +-- app  
     |   +-- css
     |   |   +-- scss
@@ -107,93 +104,93 @@ For the scripts we’ll write later to make sense, let’s make sure we are on t
     |   |   +-- bundle.js
     |   +-- index.html
     +-- package.json
-```
+~~~
 
 ## Building Your Own Scripts
 
 The first thing we need to do is install Browserify. With Browserify, we can write scripts in the CommonJS “require” format, just like you would in a Node.js app. Each file is a module and should explicitly require all of its dependencies. Install Browserify:
 
-```
+~~~
 npm install browserify --save-dev
-```
+~~~
 
 And while we’re at it, let’s go ahead and install jQuery as well:
 
-```
+~~~
 npm install jquery --save
-```
+~~~
 
 Notice that we added Browserify using the --save-dev option and jQuery with --save. Dependencies are required to run your app, while devDependencies are only required while you are developing. jQuery and Bootstrap are required dependencies, while Browserify, JSlint and node-sass are devDependencies.
 
 It’s time to start writing some JavaScript! Add the following to your index.js file:
 
-```
+~~~
 var $ = require('jquery'); // loading our first module!
 global.jQuery = global.$ = $; // exposing jQuery as a global variable
 console.log("npm ftw"); // you can add any JavaScript here 
-```
+~~~
 
 Since Browserify bundles all the required modules so they won’t conflict with each other, jQuery has to be manually exposed to the window object.
 
 Also, for the bundle.js file to be automatically recompiled once any of our source files gets updated, we have to add Watchify:
 
-```
+~~~
 npm install watchify --save-dev
-```
+~~~
 
 Now writing our first scripts should be a breeze. The “build:js” script simply will tell Browserify to compile the modules on index.js to bundle.js. The “watch:js” script will wait for changes and automatically compile.
 
-```
+~~~
 "scripts" : {
   "build:js": "browserify app/js/index.js > app/js/bundle.js",
   "watch:js": "watchify app/js/index.js -do app/js/bundle.js" 
 }
-```
+~~~
 
 Now let’s go over our style scripts. To compile SCSS to CSS, all we need to add is the “node-sass” and “nodemon” modules.
 
 We will be using node-sass and nodemon to handle CSS preprocessing. Node-sass allows us to natively compile SCSS files to CSS, while nodemon monitors changes in source files and restarts the server automatically when a file changes.
 
-```
+~~~
 npm install --save-dev node-sass nodemon
-```
+~~~
 
 Now we can add a couple more scripts to handle CSS preprocessing:
 
-```
+~~~
 "scripts" : {
   "build:js": "browserify app/js/index.js > app/js/bundle.js",
   "watch:js": "watchify app/js/index.js -do app/js/bundle.js" ,
   "build:css" : "node-sass app/css/scss/style.scss app/css/style.css",
   "watch:css": "nodemon -e scss -x \"npm run build:css\""  
 }
-```
+~~~
 
 You are encouraged to adjust some of the options passed to node-sass to configure any compression, add a sourceMap or any other output options.
 
 If you are developing a static site, you may want to also add a “serve” script using http-server.
 
-``` 
+~~~ 
 "serve": "http-server"
-```
+~~~
 
 You can also combine your build scripts into a complex “build-all” script or “watch-all” script like so:
 
-```
+~~~
 "build": "npm run build:js & npm run build:css",
 "watch": "npm run watch:js & npm run watch:css"
-```
+~~~
 
 
 To finish off, let’s add a “start” script to bind everything together:
 
-```
+~~~
 "start" : "npm run serve && npm run watch"
-```
+~~~
 
 Your package.json should look very close to this:
 
-```
+~~~
 {
   "name": "npm-is-awesome",
   "version": "1.0.0",
@@ -221,12 +218,13 @@ Your package.json should look very close to this:
     "jquery": "^2.2.1"
   }
 }
-```
+~~~
 
 
 Your index.html should be pretty clean and only have references to the compiled bundle.js and style.css files:
 
-```html
+~~~
+<html>
 <!DOCTYPE html>
 <html>
   <head>
@@ -239,7 +237,7 @@ Your index.html should be pretty clean and only have references to the compiled 
     <script src="js/bundle.js" charset="utf-8"></script>
   </body>
 </html>
-```
+~~~
 
 
 Now just type ``npm run start`` in your command line and simply concentrate on developing awesome web apps!
