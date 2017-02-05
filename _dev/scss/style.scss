@@ -30,6 +30,12 @@ h1 > aside, h2 > aside {
 h1 > aside {
   font-size: 40%;
 }
+p ~ h2 {
+  margin-bottom: 0;
+}
+h2 + p {
+    margin-top: 0.5em;
+}
 p > strong {
   font-family: 'Montserrat', serif;
   color: #000000;
@@ -83,25 +89,37 @@ nav.navbar {
      display: inline-block;
     }
   }
-   ul.social {
-    margin: 0;
-    li {
-      margin: 0 5px;
-      text-align: center;
-      @include transition(0.2s,  linear);
-    }
-  }
 }
 
 .bio {
   border-bottom: 1px solid #eee;
   text-align: center;
-  padding: 1em 0 0 0;
+  padding: 1em 0 1em 0;
+  h1 {
+    margin-bottom: 0;
+  }
   h2 {
     color: #d3d3d3;
   }
 }
+ul.social {
+  margin: 0;
+  text-align: center;
+  li {
+    margin: 0 5px;
+    text-align: center;
+    font-size: 32px;
+    @include transition(0.2s,  linear);
+    a {
+      color:#999999;
+      &:hover {
+        color:#147a94; 
+        background-color: transparent;
+      }
 
+    }
+  }
+}
 .avatar {
   img {
     margin: 0 auto;
@@ -187,13 +205,25 @@ footer.site-footer {
 }
 
 .navigation {
-  margin: 1em 0;
+  margin: 1em 0 1.5em 0;
   position: relative;
   display: block;
   text-align: center;
 
   a {
     padding: 0.5em;
+    position: relative;
+  }
+  .prev {
+    float: left;
+  }
+  .next {
+    float: right;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;  
   }
 }
 
