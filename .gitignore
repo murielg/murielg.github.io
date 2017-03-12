@@ -3,7 +3,6 @@
 node_modules/
 npm-debug.log.*
 npm-debug.log
-Gemfile
 .lock
 .ruby-version
 _drafts/
