@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Commenting React Examples"
+title: "React Examples"
 date: 2017-06-01
 ---
 
