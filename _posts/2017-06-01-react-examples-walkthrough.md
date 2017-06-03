@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "React Walkthrough"
+title: "Commenting React Examples"
 date: 2017-06-01
 ---
 
-A collection of commented examples to get started with ReactJS in ascending order of complexity. 
+I have commented the a handful of examples from React's documentation. Should serve as a quick introduction for anyone getting started with ReactJS. 
 
 ## A Simple Component
 
@@ -30,13 +30,6 @@ Check out some of my React stuff:
 
   - [React + Redux examples](https://github.com/murielg/react-redux)
 
-  - [WebVR using React](https://github.com/murielg/webvr) 
-
-
-Must reads:
-
-- React Docs 
-- [Redux Tutorial](https://egghead.io/courses/getting-started-with-redux)
 
 ## References
 
