@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "React Examples"
-date: 2017-06-01
+date: 2017-06-02
 ---
 
 I have commented the a handful of examples from React's documentation. Should serve as a quick introduction for anyone getting started with ReactJS. 
