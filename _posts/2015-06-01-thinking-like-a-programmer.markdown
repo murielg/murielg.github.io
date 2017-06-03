@@ -45,8 +45,10 @@ Understanding code is not the same as understanding programming. Programmers don
 
 * **Experiment.** You shouldn’t be expected to think about a problem and implement it perfectly on the first try. Always experiment after conceptualizing. A great way of doing this is writing a little console program to test a small piece of the problem. This way, you will gain some understanding of the code you have and how it works before you implement it. Experiments will allow you to hypothesize, try things out and verify whether your assumptions were correct.
 
-**TL;DR:** 
-*Pick any project. Set a target goal for what you wish to accomplish, and stick with it. Lay out everything that you have to do, even if you don’t know how to do it. Don’t be afraid to break stuff. Figure out why things are broken. Fix them. Test them. Rinse and repeat.*
+<div class="tldr">
+  <span><strong>TL;DR:</strong></span>
+  Pick any project. Set a target goal for what you wish to accomplish, and stick with it. Lay out everything that you have to do, even if you don’t know how to do it. Don’t be afraid to break stuff. Figure out why things are broken. Fix them. Test them. Rinse and repeat.
+</div>
 
 ## References
 

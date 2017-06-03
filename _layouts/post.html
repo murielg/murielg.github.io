@@ -2,7 +2,10 @@
 layout: default
 comments: true
 ---
-<nav><span></span><span></span><span></span></nav>
+ {% include nav.html %}
+
+ <a href="/">« Back</a>
+ 
 <section class="post">
   <h1>
     <aside>{{ page.date | date: "%b %-d, %Y" }}</aside>
