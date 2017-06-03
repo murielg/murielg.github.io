@@ -10,17 +10,25 @@ I have commented the a handful of examples from React's documentation. Should se
 
 <script src="https://gist.github.com/murielg/b8ce1912a20c5518508be468beee8a58.js"></script>
 
+---
+
 ## A Stateful Component
 
 <script src="https://gist.github.com/murielg/af9c063ea3ea994f6368e2ee39b803bc.js"></script>
+
+---
 
 ## An Application
 
 <script src="https://gist.github.com/murielg/b37c7aae5cef26065b0379f5af3578a8.js"></script>
 
+---
+
 ## A Component Using a Plugin
 
 <script src="https://gist.github.com/murielg/47c33421602db2f9e0d8055787954139.js"></script>
+
+---
 
 ## Want More React?
 
