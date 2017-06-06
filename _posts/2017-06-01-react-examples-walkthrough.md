@@ -10,7 +10,7 @@ I have commented a handful of examples taken from React's documentation. These e
 
 <a class="jsbin-embed" href="http://jsbin.com/fexelu/embed?js,output">JS Bin on jsbin.com</a>
 
-<script src="http://static.jsbin.com/js/embed.min.js?4.0.4"></script>
+<script src="https://static.jsbin.com/js/embed.min.js?4.0.4"></script>
 
 ## A Simple Component
 
