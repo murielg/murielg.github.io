@@ -4,7 +4,12 @@ title: "React Examples"
 date: 2017-06-02
 ---
 
-I have commented the a handful of examples from React's documentation. Should serve as a quick introduction for anyone getting started with ReactJS. 
+I have commented a handful of examples taken from React's documentation. These examples cover the very basics of React: JSX, props, state and lifecycle. 
+
+## Basic Setup
+You can copy and paste your examples in the JS
+
+<a class="jsbin-embed" href="http://jsbin.com/fexelu/embed?js,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?4.0.2"></script>
 
 ## A Simple Component
 
