@@ -6,7 +6,10 @@ date: 2017-06-02
 
 I have commented a handful of examples taken from React's documentation. These examples cover the very basics of React: JSX, props, state and lifecycle. 
 
-## Basic Setup
+## Set Up
+
+I've embedded a JSFiddle below for you to try out the examples and see them for yourself, without any of the set-up. 
+It's already hooked up with React, ReactDOM and a container div to render your apps!
 
 <iframe width="100%" height="300" src="//jsfiddle.net/murielg/bsjfyap3/5/embedded/js,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
@@ -34,16 +37,18 @@ I have commented a handful of examples taken from React's documentation. These e
 
 ---
 
-## Want More React?
-
-Check out some of my React stuff:
+I will be commenting more examples in the future, but in the mean time, feel free to check out some of my React projects here:
 
   - [React Starter Template](https://github.com/murielg/reactstarter)
 
   - [React + Redux examples](https://github.com/murielg/react-redux)
 
 
-## References
+## Want to build your own? 
 
-- [React Docs](https://facebook.github.io/react/)
+The following resources are a must for any React developer
 
+- 🔗[React Docs](https://facebook.github.io/react/)
+- 🔗[Redux](https://github.com/reactjs/redux)
+- 🔗[React Router](https://github.com/ReactTraining/react-router)
+- 🔗[webpack](http://webpack.github.io/)
