@@ -8,7 +8,7 @@ I have commented a handful of examples taken from React's documentation. These e
 
 ## Basic Setup
 
-<a class="jsbin-embed" href="http://jsbin.com/fexelu/embed?js,output">JS Bin on jsbin.com</a>
+<a class="jsbin-embed" href="https://jsbin.com/fexelu/embed?js,output">JS Bin on jsbin.com</a>
 
 <script src="https://static.jsbin.com/js/embed.min.js?4.0.4"></script>
 
