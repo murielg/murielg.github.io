@@ -48,7 +48,7 @@ I will be commenting more examples in the future, but in the mean time, feel fre
 
 The following resources are a must for any React developer
 
-- 🔗[React Docs](https://facebook.github.io/react/)
-- 🔗[Redux](https://github.com/reactjs/redux)
-- 🔗[React Router](https://github.com/ReactTraining/react-router)
-- 🔗[webpack](http://webpack.github.io/)
+- 🔗 [React Docs](https://facebook.github.io/react/)
+- 🔗 [Redux](https://github.com/reactjs/redux)
+- 🔗 [React Router](https://github.com/ReactTraining/react-router)
+- 🔗 [webpack](http://webpack.github.io/)
