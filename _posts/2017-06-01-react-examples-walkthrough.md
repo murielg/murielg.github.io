@@ -7,9 +7,9 @@ date: 2017-06-02
 I have commented a handful of examples taken from React's documentation. These examples cover the very basics of React: JSX, props, state and lifecycle. 
 
 ## Basic Setup
-You can copy and paste your examples in the JS
+You can copy and paste your examples in the Fiddle below and tap *Run*:
 
-<a class="jsbin-embed" href="http://jsbin.com/fexelu/embed?js,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?4.0.2"></script>
+<script src="//jsfiddle.net/murielg/bsjfyap3/1/embed/js,result/"></script>
 
 ## A Simple Component
 
