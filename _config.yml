@@ -17,3 +17,5 @@ markdown: kramdown
 highlighter: rouge
 exclude: ["node_modules","package.json", "Rakefile","Gemfile", "Gemfile.lock"]
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+gems:
+  - jemoji
