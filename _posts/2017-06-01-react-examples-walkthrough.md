@@ -8,9 +8,7 @@ I have commented a handful of examples taken from React's documentation. These e
 
 ## Basic Setup
 
-<a class="jsbin-embed" href="https://jsbin.com/fexelu/embed?js,output">JS Bin on jsbin.com</a>
-
-<script src="https://static.jsbin.com/js/embed.min.js?4.0.4"></script>
+<iframe width="100%" height="300" src="//jsfiddle.net/murielg/bsjfyap3/5/embedded/js,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## A Simple Component
 
