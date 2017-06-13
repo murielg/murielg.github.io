@@ -2,16 +2,15 @@
 layout: default
 comments: true
 ---
- {% include nav.html %}
+{% include nav.html %}
 
  <a href="/">« Back</a>
  
 <section class="post">
   <h1>
-    <aside>{{ page.date | date: "%b %-d, %Y" }}</aside>
+    <aside>{{ page.date | date: "%b %-d, %Y" }} · {% include readtime.html %}</aside>
     {{ page.title }}
   </h1>
-    
   <article class="post-content">
     {{ content }}
   </article>
