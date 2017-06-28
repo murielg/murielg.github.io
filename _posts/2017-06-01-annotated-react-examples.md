@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "React Examples"
+title: "Annotated React Examples"
 date: 2017-06-02
 ---
 
@@ -8,8 +8,7 @@ I have commented a handful of examples taken from React's documentation. These e
 
 ## Set Up
 
-I've embedded a JSFiddle below for you to try out the examples and see them for yourself, without any of the set-up. 
-It's already hooked up with React, ReactDOM and a container div to render your apps! Just write your Javascript on the Babel+JSX tab and then see the results under the Result tab. 
+I've embedded a JSFiddle below for you to try out the examples and see them for yourself, without any of the set-up. It's already hooked up with React, ReactDOM and a container div to render your apps! Click `Edit in JSFiddle` and write your Javascript on the Babel+JSX tab and then see the results on the Result tab. 
 
 <iframe width="100%" height="300" src="//jsfiddle.net/murielg/bsjfyap3/5/embedded/js,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
