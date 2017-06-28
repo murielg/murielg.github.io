@@ -1,13 +1,20 @@
 @import "normalize.scss";
 @import "mixins.scss";
 @import "_syntax-highlighting";
-//font-family: 'Roboto Slab', serif;
-//font-family: 'Raleway', sans-serif;
+
+$shark: #25272C;
+$dusty: #A8989B;
+$alabaster: #f7f7f7;
+$alto: #d8d8d8;
+$cerulean: #077eb7;
+$moonglow: #FCFEDA;
+$apricot: #FBCEB1;
+
 html,body {
   margin: 0;
   padding: 0;
   position: relative;
-  color: #494949;
+  color: $shark;
   font-size: 18px;
   line-height: 1.5;
   font-family: 'Roboto Slab', sans-serif;
@@ -19,12 +26,13 @@ html {
 }
 
 body {
-  border-top: 5px solid #222;
+  border-top: 20px solid $alabaster;
   margin: 0 0 60px; 
 }
 
 h1, h2, h3 {
-  font-family: 'Raleway', serif; 
+  font-family: 'Raleway', serif;
+  font-weight: 600; 
   margin: 1em 0;
 }
 
@@ -34,8 +42,9 @@ h2 {
 }
 
 h1 > aside, h2 > aside {
-  color: #999999;
+  color: $dusty;
   font-size: 60%;
+  font-weight: 400;
   text-transform: lowercase;
 }
 
@@ -54,8 +63,7 @@ h2+p, h3+p, h4+p {
 
 p > strong {
   font-family: 'Raleway', serif;
-  color: #000000;
-  font-weight: bold;
+  font-weight: 600;   
 }
 
 ul {
@@ -71,27 +79,28 @@ img {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: $shark;
   &:hover {
-    background-color: #f7f7f7;
-    color: #000000;
+    background-color: $alabaster;
+  }
+  &.btn-back {
+    padding: 0.5em;
   }
 }
 
 .bio {
   text-align: center;
-  padding: 3.5em 0 2em 0;
+  padding: 3.5em 0 1em 0;
   
   h1 {
     margin: 0;
-    font-size: 1.75em;
-    color: #413f3a;  
+    font-size: 1.75em; 
   }
   h2 {
     margin: 0 0 1em 0;
     font-family: 'Roboto Slab', sans-serif;
-    font-size: 90%;
-    color: #383838;
+    font-size: 90%;  
+    font-weight: 300;
   }
 
   a.avatar {
@@ -111,13 +120,14 @@ ul.social {
   li {
     margin: 0 5px;
     text-align: center;
-    font-size: 24px;
-    @include transition(0.2s,  linear);
+    font-size: 28px;
     a {
-      color:#999999;
+      color:$alto;
       padding: 5px;
+      @include transition(0.2s,  linear);
+
       &:hover {
-        color:#147a94; 
+        color:$cerulean; 
         background-color: transparent;
       }
 
@@ -128,13 +138,14 @@ ul.social {
 .post-list {
   @extend %unstyled-list;
   article {
-    border-bottom: 1px solid #EEE;
+    border-bottom: 1px solid $alabaster;
     text-align: center;
     margin: 0 auto;
     h2 {
       margin: 0;
       text-transform: capitalize;
       padding: 1rem 0;
+      font-weight: 400;
     }
     a {
       position: relative;
@@ -145,11 +156,11 @@ ul.social {
 }
 
 ::selection {
-  background-color:#fefecf;
+  background-color:$moonglow;
 }
 
 ::-moz-selection {
-  background-color:#fefecf;    
+  background-color:$moonglow;    
 }
 
 .container, nav.navbar{
@@ -168,7 +179,7 @@ ul.social {
 blockquote {
   position: relative;
   padding: 0;
-  color: #413f3a;
+  color: $dusty;
   font-style: italic;
   line-height: 1.6em;
   margin-top: 1.8em;
@@ -203,24 +214,24 @@ p + footer {
     text-transform: uppercase;
   }
   a {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid $shark;
   }
 }
 
 pre {
-  background: #f7f7f7;
+  background: $alabaster;
   overflow-x: auto;
   padding: 5px 10px;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap; 
   word-wrap: break-word;
-  border-left: 4px solid #0088ab;
+  border-left: 4px solid $cerulean;
   overflow: auto;
   font-size: 15px;
 }
 p .highlighter-rouge { 
   background-color: #f7f7f7;
-  color: #000;
+  color: $shark;
   padding: 5px;
 
 }
@@ -252,10 +263,11 @@ p .highlighter-rouge {
 .tldr {
   span {
     margin: 0;
-    color: #ED9261;
+    color: $apricot;
     text-transform: uppercase;
     font-size: 1rem;
-    font-family: 'Raleway', serif; 
+    font-family: 'Raleway', serif;
+    font-weight: 600;   
   }
 }
 
