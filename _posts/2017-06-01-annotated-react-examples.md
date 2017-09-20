@@ -30,12 +30,6 @@ I've embedded a JSFiddle below for you to try out the examples and see them for 
 
 ---
 
-## A Component Using a Plugin
-
-<script src="https://gist.github.com/murielg/47c33421602db2f9e0d8055787954139.js"></script>
-
----
-
 I will be commenting more examples in the future, but in the mean time, feel free to check out some of my React projects here:
 
   - [React Starter Template](https://github.com/murielg/reactstarter)
