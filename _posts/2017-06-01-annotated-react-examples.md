@@ -4,11 +4,11 @@ title: "Annotated React Examples"
 date: 2017-06-02
 ---
 
-I have commented a handful of examples taken from React's documentation. These examples cover the very basics of React: JSX, props, state and lifecycle.
+I have commented a handful of examples taken from React's documentation. These examples cover the very basics of React: JSX, props, component level state and lifecycle.
 
 ## Set Up
 
-I've embedded a JSFiddle below for you to try out the examples and see them for yourself, without any of the set-up. It's already hooked up with React, ReactDOM and a container div to render your apps! Click `Edit in JSFiddle` and write your Javascript on the Babel+JSX tab and then see the results on the Result tab. 
+I've embedded a JSFiddle below for you to try out the examples and see them for yourself, without any of the set-up. It's already hooked up with React, ReactDOM and a container div to render your apps! Open it on a new window and start writing your Javascript on the Babel+JSX tab.
 
 <iframe width="100%" height="300" src="//jsfiddle.net/murielg/bsjfyap3/5/embedded/js,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
@@ -39,9 +39,8 @@ I will be commenting more examples in the future, but in the mean time, feel fre
 
 ## Want to build your own? 
 
-The following resources are a must for any React developer
+The following resources are a must read if you want to get into React development
 
 - 🔗 [React Docs](https://facebook.github.io/react/)
 - 🔗 [Redux](https://github.com/reactjs/redux)
 - 🔗 [React Router](https://github.com/ReactTraining/react-router)
-- 🔗 [webpack](http://webpack.github.io/)
