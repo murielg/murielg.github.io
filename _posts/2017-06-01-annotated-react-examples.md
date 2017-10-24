@@ -30,16 +30,18 @@ I've embedded a JSFiddle below for you to try out the examples and see them for 
 
 ---
 
-I will be commenting more examples in the future, but in the mean time, feel free to check out some of my React projects here:
+Feel free to check out some of my React projects here:
 
   - [React Starter Template](https://github.com/murielg/reactstarter)
 
   - [React + Redux examples](https://github.com/murielg/react-redux)
+  
+  - [React Native + Redux examples](https://github.com/murielg/react-native-redux) 
 
 
-## Want to build your own? 
+## Want to build your own React apps? 
 
-The following resources are a must read if you want to get into React development
+The following resources are a must read if you want to get into React development:
 
 - 🔗 [React Docs](https://facebook.github.io/react/)
 - 🔗 [Redux](https://github.com/reactjs/redux)
