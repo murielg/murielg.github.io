@@ -5,7 +5,7 @@ date: 2019-11-11
 ---
 
 Kotlin extension functions and properties are similar to member functions/properties, but defined outside of any class.  They let you extend the functionality of a class without having to derive a new class, or use any kind of design pattern. 
-This functionality is helpful when you want to modify classes that you don’t have access to, such as built-in or third-party classes. 
+This functionality is helpful when you want to modify classes that you don’t have access to, such as platform api’s or third-party classes. 
 
 For example, take the following Android `toast` function: 
 ```kotlin
@@ -14,7 +14,7 @@ private fun toast(message: String) {
 }
 ```
 
-In order to create a extension function so that Context can use this function. Create a new file called `Extensions.kt` and add the following: 
+In order to create a extension function so that Context can use this toast function, create a new file called `Extensions.kt` and add the following: 
 ```kotlin
 fun Context.toast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_LONG).show()
@@ -52,8 +52,25 @@ val <T> List<T>.lastIndex: Int
     get() = size - 1
 ```
 
-It’s important to note that extension functions only have access to public properties and functions of the class they are extending.  Extension functions do not modify the classes or instances they are extending, but rather make these new functions callable via dot-notation, therefore making their integratiio with existing classes and objects appear seamless. 
+Extension functions only have access to public properties and functions of the class they are extendingxtension functions do not modify the classes or instances they are extending, but rather make these new functions callable via dot-notation, therefore making their integration with existing classes and objects appear seamless. 
+Note that extensions are resolved statically:
+```kotlin
+open class Vehicle
+class Truck: Vehicle()
 
-Don’t abuse the power of extension functions though. As you can see from the examples above, it would be very easy to implement a wide array of abstractions that could make your code a lot harder to understand and mantain.  Kotlin functions are super cool, but only when traditional object oriented methods won’t cut it.  
+fun Vehicle.getName() = "Vehicle"
+fun Truck.getName() = "Truck"
+
+fun printClassName(v: Vehicle) {
+    println(v.getName())
+}    
+
+printClassName(Truck())} // prints Vehicle
+```
+The above snippet outputs **Vehicle** because the extension function `getName()` is determined by the declared type of the `v` parameter, which is of the `Vehicle` class. 
+
+It would be very easy to use extensions to implement a wide variety abstractions that could make your code a lot harder to understand and mantain, so don’t abuse the power of extension functions.  And remember that static type is resolved at compiled time. 
 
 To learn more, see Kotlin’s official documentation on Extensions [Extensions - Kotlin Programming Language](https://kotlinlang.org/docs/reference/extensions.html)
+
+#dev/kotlin
