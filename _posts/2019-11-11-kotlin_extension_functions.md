@@ -4,7 +4,6 @@ title: "Kotlin Extension Functions"
 date: 2019-11-11
 ---
 
-# Kotlin Extension Functions 
 Kotlin extension functions and properties are similar to member functions/properties, but defined outside of any class.  They let you extend the functionality of a class without having to derive a new class, or use any kind of design pattern. 
 This functionality is helpful when you want to modify classes that you don’t have access to, such as built-in or third-party classes. 
 
