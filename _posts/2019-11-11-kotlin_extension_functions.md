@@ -72,5 +72,3 @@ The above snippet outputs **Vehicle** because the extension function `getName()`
 It would be very easy to use extensions to implement a wide variety abstractions that could make your code a lot harder to understand and mantain, so don’t abuse the power of extension functions.  And remember that static type is resolved at compiled time. 
 
 To learn more, see Kotlin’s official documentation on Extensions [Extensions - Kotlin Programming Language](https://kotlinlang.org/docs/reference/extensions.html)
-
-#dev/kotlin
