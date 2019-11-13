@@ -9,14 +9,6 @@ I personally think everyone should learn how to program. Not just because that�
 
 And even if you don’t end up using programming for any practical reasons, it will at least teach you how to think.
 
-## Programming and Philosophy
-
-There are obvious areas where computer science, programming and philosophy overlap: robotics, machine learning, artificial intelligence and virtual reality, to name a few. It’s also becoming more and more common to use computational modeling along with the philosophical method. Algorithms, models, proof and verification are now part of what scientists use in the construction and evaluation of hypotheses.
-
-But what else can philosophy teach us? Not only will philosophy help us open our minds and expose us to a wide range of different thoughts, subjects, the nature of reality and what our place in it might be, it will also give us the ability to think through radical and innovative ideas, from beginning to end.
-
-Philosophy can teach us to develop logical and analytical rigor. By applying these concepts, we will be able to analyze complicated discursive and technical problems and, at the same time, to write programs, which just so happen to be very complex logic puzzles.
-
 ## The way we think
 
 Programmers are creative problem solvers. We are analytical thinkers. We are able to take on a complex task and transform it into a bunch of different smaller, simpler tasks. We love puzzles and problems. This is the bread and butter of programmers.
