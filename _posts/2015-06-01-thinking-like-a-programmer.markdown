@@ -5,10 +5,6 @@ date: 2015-06-01
 
 ---
 
-I personally think everyone should learn how to program. Not just because that’s what I do, and I absolutely love it, but because software has already taken over the world. Everyone is coding, and we are surrounded by code. Wearable technology, turning on your car using your phone, drones delivering packages to your front door, self-parking cars, or better yet, self-driving cars. It’s fascinating. 
-
-And even if you don’t end up using programming for any practical reasons, it will at least teach you how to think.
-
 ## The way we think
 
 Programmers are creative problem solvers. We are analytical thinkers. We are able to take on a complex task and transform it into a bunch of different smaller, simpler tasks. We love puzzles and problems. This is the bread and butter of programmers.
