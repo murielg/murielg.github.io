@@ -17,7 +17,7 @@ val addition = { x, y : -> x + y }
 The two lambdas above take in two `Int` parameters and return an `Int`. 
 The second lambda takes advantage of type inference, and can be even shorter. 
 
-If a lambda only takes in 1 parameter, you can shorten it further by usong the reserved `it`  keyword: 
+If a lambda only takes in 1 parameter, you can shorten it further by using the reserved `it`  keyword: 
 ```kotlin
 
 val double = { 2 * it }
@@ -26,7 +26,7 @@ val square = { it * it }
 
 ```
 
-Using lambdas allow us to simplify more complex functions. Wihout ambda: 
+Using lambdas allow us to simplify more complex functions. Wihout lambda: 
 ```kotlin
 interface Callback {
   fun onCallback(result: String)
