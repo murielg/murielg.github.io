@@ -41,7 +41,7 @@ Feel free to check out some of my React projects here:
 
 ## Want to build your own React apps? 
 
-The following resources are a must read if you want to get into React development:
+If you want to dig deeper, check out the following resources on react development:
 
 - 🔗 [React Docs](https://facebook.github.io/react/)
 - 🔗 [Redux](https://github.com/reactjs/redux)
