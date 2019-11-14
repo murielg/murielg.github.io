@@ -52,8 +52,6 @@ fun doAsync (x : Int, callback: (String) -> Unit) {
 doAsync(20) { result -> print(result)}
 ```
 
-Lambdas in kotlin also act as closures, mening they can access the variables and constants from within their own scope. 
-
 Iterating over collections also becomes really easy with the help of lambdas: 
 ```kotlin
 
