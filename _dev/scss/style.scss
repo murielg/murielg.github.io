@@ -221,13 +221,13 @@ p + footer {
 pre {
   background: $alabaster;
   overflow-x: auto;
-  padding: 5px 10px;
+  padding: 20px;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap; 
   word-wrap: break-word;
-  border-left: 4px solid $cerulean;
   overflow: auto;
   font-size: 15px;
+  border-radius: 7px;
 }
 p .highlighter-rouge { 
   background-color: #f7f7f7;
