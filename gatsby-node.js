@@ -23,19 +23,15 @@ exports.createPages = (({graphql, actions}) => {
         result.data.allMarkdownRemark.edges.forEach(({node}) => {
           const path = node.frontmatter.path;
           createPage({
-            path,
+            path: path,
             component: blogPostTemplate,
             context: {
               pathSlug: path
             }
           });
-
           resolve()
-
         })
       })
     )
-
   })
-
 });

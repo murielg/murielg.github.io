@@ -1,5 +1,6 @@
 ---
 path: "/2019-11-11-kotlin_extension_functions"
+slug: "kotlin-extension-functions"
 title: "Kotlin Extension Functions"
 date: 2019-11-11
 tags: ['kotlin']

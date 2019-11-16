@@ -1,5 +1,6 @@
 ---
 path: "/2019-11-13-kotlin_lambda_functions"
+slug: "kotlin-lambda-functions"
 title: "Kotlin Lambda Functions"
 date: 2019-11-13
 tags: ['kotlin']

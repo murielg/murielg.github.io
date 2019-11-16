@@ -6,8 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Blog',
-    description: 'Dev Blog'
+    title: 'Muriel Gonzalez',
+    description: 'web and mobile developer'
   },
   plugins: [
     `gatsby-transformer-remark` ,
@@ -17,6 +17,8 @@ module.exports = {
         name: `pages`,
         path: `${__dirname}/src/pages`
       }
-    }
+    },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`
   ]
 };

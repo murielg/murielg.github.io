@@ -2,14 +2,14 @@ import React, {Fragment} from 'react';
 import {graphql, StaticQuery} from 'gatsby';
 
 const Header = ({data}) => {
-  const {title, description} = data.site.siteMetadata
+  const {title, description} = data.site.siteMetadata;
   return (
     <Fragment>
       <h2>{title}</h2>
       <p>{description}</p>
     </Fragment>
   )
-}
+};
 
 const HeaderQuery = () => {
   return (
@@ -23,7 +23,7 @@ const HeaderQuery = () => {
         }
       }
     `}
-                 render={ data => <Header data={data}/>}
+    render={ data => <Header data={data}/>}
     />
   )
 };
