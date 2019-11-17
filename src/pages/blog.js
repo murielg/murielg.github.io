@@ -1,11 +1,15 @@
-import React from "react";
+import React, {Fragment} from "react";
 import  {graphql, Link } from 'gatsby';
 import Layout from "../components/layout"
+import {Helmet} from 'react-helmet';
 
 const Blog = ({data}) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
+      <Helmet>
+        <title>Blog | Muriel Gonzalez</title>
+      </Helmet>
       {edges.map(edge => {
         const {frontmatter} = edge.node;
         return  (

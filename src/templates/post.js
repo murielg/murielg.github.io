@@ -1,18 +1,22 @@
 import React from "react"
 import  {graphql, Link } from 'gatsby';
-
+import {Helmet} from 'react-helmet';
+import Layout from '../components/layout';
 const Post = ({data}) => {
   const { markdownRemark } = data;
   const title = markdownRemark.frontmatter.title;
   const date = markdownRemark.frontmatter.date;
   const html = markdownRemark.html;
   return (
-    <div>
+    <Layout>
+      <Helmet>
+        <title>{title} | Muriel Gonzalez</title>
+      </Helmet>
         <h1>{title}</h1>
         <p>{date}</p>
         <div dangerouslySetInnerHTML={{__html: html}} >
         </div>
-    </div>
+    </Layout>
 
   )
 };
