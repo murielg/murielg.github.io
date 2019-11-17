@@ -12,8 +12,8 @@ const Post = ({data}) => {
       <Helmet>
         <title>{title} | Muriel Gonzalez</title>
       </Helmet>
-        <h1>{title}</h1>
         <p>{date}</p>
+        <h1>{title}</h1>
         <div dangerouslySetInnerHTML={{__html: html}} >
         </div>
     </Layout>
