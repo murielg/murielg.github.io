@@ -3,7 +3,7 @@ path: "/2019-11-11-kotlin_extension_functions"
 slug: "kotlin-extension-functions"
 title: "Kotlin Extension Functions"
 date: 2019-11-11
-tags: ['kotlin']
+tags: ['kotlin', 'android']
 ---
 
 Kotlin extension functions and properties are similar to member functions/properties, but defined outside of any class.  They let you extend the functionality of a class without having to derive a new class, or use any kind of design pattern. 

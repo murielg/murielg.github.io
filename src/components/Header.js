@@ -5,9 +5,11 @@ const Header = ({data}) => {
   const {title, description} = data.site.siteMetadata;
   return (
     <Fragment>
-        <h2>{title}</h2>
-        <p>{description}</p>
+      <header>
+        <h1>{title}</h1>
+        <h3>{description}</h3>
         <Nav/>
+      </header>
     </Fragment>
   )
 };
