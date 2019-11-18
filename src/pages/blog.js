@@ -1,7 +1,7 @@
-import React, {Fragment} from "react";
+import React from "react";
 import  {graphql, Link } from 'gatsby';
-import Layout from "../components/layout"
 import {Helmet} from 'react-helmet';
+import Layout from "../components/layout"
 
 const Blog = ({data}) => {
   const { edges } = data.allMarkdownRemark;
@@ -16,7 +16,7 @@ const Blog = ({data}) => {
         return  (
           <article className='post' key={frontmatter.path}>
 
-            <Link to={frontmatter.path}>
+            <Link to={frontmatter.path} className='post-title'>
               {frontmatter.title}
             </Link>
             <ul className='tags'>

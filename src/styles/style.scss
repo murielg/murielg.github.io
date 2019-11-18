@@ -12,12 +12,15 @@ html {
 
 a {
   color: #E2F039;
+  &:hover {
+    color: #FF159E;
+  }
 }
 
 .container {
   margin: 0 auto;
   max-width: 35rem;
-  padding: 0 1rem;
+  padding: 0 1em;
 }
 
 header {
@@ -27,6 +30,8 @@ header {
  }
   h1 {
     font-weight: 400;
+    font-size: 2em;
+    margin-bottom: 0;
   }
   h3 {
     color: #E2F039;
@@ -36,10 +41,20 @@ header {
 }
 
 article.post {
-  padding: 40px;
+  padding: 20px;
   color: #E2F039;
   background-color: #1C1E4E;
   margin: 20px 0;
+
+}
+a.post-title {
+  font-size: 1.25em;
+}
+
+p.post-date {
+  text-align: right;
+  margin: 0;
+  color: white;
 }
 
 ul.tags {
@@ -49,6 +64,7 @@ ul.tags {
     display: inline;
     color: #AAAAAA;
     margin-right: 10px;
+    font-size: 1em;
   }
 }
 
@@ -87,7 +103,12 @@ footer {
     a {
       color: white;
       font-size: 2rem;
-      padding: 40px;
+      padding: 10px;
+      margin: 0 20px;
+
+      &:hover {
+        color: #FF159E;
+      }
     }
   }
   p {
