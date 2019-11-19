@@ -1,9 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import {Helmet} from 'react-helmet';
-import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
+import { Disqus } from 'gatsby-plugin-disqus';
 import Layout from '../components/layout';
-
 
 const Post = (props) => {
   console.log(props);
@@ -11,7 +10,7 @@ const Post = (props) => {
   const title = markdownRemark.frontmatter.title;
   const date = markdownRemark.frontmatter.date;
   const html = markdownRemark.html;
-  var id = props.path.split('/').slice(-1)[0];
+  const id = props.path.split('/').slice(-1)[0];
 
   let disqusConfig = {
     url: `${props.data.meta.siteMetadata.url+props.path}`,
@@ -23,7 +22,7 @@ const Post = (props) => {
   return (
     <Layout>
       <Helmet>
-        <title>| Muriel Gonzalez</title>
+        <title>{title} | Muriel Gonzalez</title>
       </Helmet>
         <p>{date}</p>
         <h1>{title}</h1>

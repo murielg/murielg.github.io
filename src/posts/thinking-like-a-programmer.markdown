@@ -2,10 +2,10 @@
 title: "Thinking like a programmer"
 path: "/blog/thinking-like-a-programmer"
 date: 2016-03-01
-tags: ['programming']
+tags: ['programming', 'learning']
 ---
 
-## The way we think
+## The way programmers think
 
 Programmers are creative problem solvers. We are analytical thinkers. We are able to take on a complex task and transform it into a bunch of different smaller, simpler tasks. We love puzzles and problems. This is the bread and butter of programmers.
 

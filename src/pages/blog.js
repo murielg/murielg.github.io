@@ -38,7 +38,7 @@ const Blog = ({data}) => {
 };
 
 export const query = graphql`
-  query HomepageQuery {
+  query BlogPosts {
      allMarkdownRemark (
       sort: { order: DESC, fields: [frontmatter___date]}
      ) {
