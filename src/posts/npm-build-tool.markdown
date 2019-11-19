@@ -3,7 +3,7 @@ path: "/blog/npm-build-tool"
 slug: "npm-build-tool"
 title: "npm as a build tool"
 date: 2015-06-01
-tags: ['npm', 'javascript', 'package managers']
+tags: ['npm', 'javascript', 'package-managers']
 ---
 
 <blockquote>
