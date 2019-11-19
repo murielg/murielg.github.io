@@ -2,8 +2,8 @@
 path: "/blog/npm-build-tool"
 slug: "npm-build-tool"
 title: "npm as a build tool"
-date: 2016-03-01
-tags: ['npm']
+date: 2015-06-01
+tags: ['npm', 'javascript', 'package managers']
 ---
 
 <blockquote>
