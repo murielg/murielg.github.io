@@ -7,7 +7,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Muriel Gonzalez',
-    description: 'web and mobile developer'
+    description: 'web and mobile developer',
+    url: `https://murielg.github.io`,
   },
   plugins: [
     `gatsby-transformer-remark` ,
@@ -25,6 +26,12 @@ module.exports = {
       options: {
         trackingId: "UA-88366603-1",
       },
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `murielg`
+      }
     },
   ]
 };
