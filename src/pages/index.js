@@ -1,16 +1,44 @@
-import React from "react"
-import Layout from '../components/layout';
-import {graphql} from 'gatsby';
-const HomePage = () => (
-  <Layout>
+import React from "react";
+import  {graphql, Link } from 'gatsby';
+import {Helmet} from 'react-helmet';
+import Layout from "../components/layout"
 
-  </Layout>
-);
+const Index = ({data}) => {
+  const { edges } = data.allMarkdownRemark;
 
-export default HomePage
+  return (
+    <Layout>
+      <Helmet>
+        <title>Blog | Muriel Gonzalez</title>
+      </Helmet>
+      {edges.map(edge => {
+        const { frontmatter } = edge.node;
+        return  (
+          <article className='post' key={frontmatter.path}>
+
+            <Link to={frontmatter.path} className='post-title'>
+              {frontmatter.title}
+            </Link>
+            <ul className='tags'>
+            {frontmatter.tags.map(tag => (
+                <li key={tag}>
+                  #{tag}
+                </li>
+              ))}
+            </ul>
+            <p className="post-date">
+              {frontmatter.date}
+            </p>
+
+          </article>
+        )
+      })}
+    </Layout>
+  )
+};
 
 export const query = graphql`
-  query LatestBlogQuery {
+  query BlogPosts {
      allMarkdownRemark (
       sort: { order: DESC, fields: [frontmatter___date]}
      ) {
@@ -27,3 +55,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Index;

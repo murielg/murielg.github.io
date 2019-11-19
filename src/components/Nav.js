@@ -4,8 +4,7 @@ const Nav = () => (
   <nav>
     <ul>
     <li>
-      <Link to='/' activeClassName="active">home</Link></li>
-      <li><Link to='/blog' activeClassName="active">blog</Link></li>
+      <Link to='/' activeClassName="active">BLOG</Link></li>
       <li><Link to='/about' activeClassName="active">about</Link></li>
     </ul>
   </nav>
