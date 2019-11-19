@@ -7,7 +7,7 @@ const AboutPage = () => (
       <p>📍I live in Dallas, TX</p>
       <p>📱I'm currently developing Android and Flutter apps</p>
       <p>💛Some of the things I love are: 😸 🐶 🚲 🎮 ⛺️</p>
-      <p>Feel free to check out some of my code on github or connect via the links below: </p>
+      <p>Feel free to check out some of my code on github or connect on LinkedIn ✌️</p>
     </div>
   </Layout>
 );
