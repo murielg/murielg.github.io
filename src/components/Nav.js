@@ -1,7 +1,6 @@
 import React from "react"
 import  { Link } from 'gatsby';
 const Nav = (props) => {
-  console.log(props);
   return (
     <nav>
       <ul>

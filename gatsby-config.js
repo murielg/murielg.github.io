@@ -1,9 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
   siteMetadata: {
     title: 'Muriel Gonzalez',
@@ -11,14 +5,6 @@ module.exports = {
     url: `https://murielg.github.io`,
   },
   plugins: [
-    `gatsby-transformer-remark` ,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts`
-      }
-    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
@@ -31,6 +17,23 @@ module.exports = {
       resolve: `gatsby-plugin-disqus`,
       options: {
         shortname: `murielg`
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark` ,
+      options: {
+        plugins: [
+          {
+            resolve:   `gatsby-remark-prismjs`,
+          }
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
       }
     },
   ]

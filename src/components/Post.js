@@ -5,7 +5,6 @@ import { Disqus } from 'gatsby-plugin-disqus';
 import Layout from '../components/layout';
 
 const Post = (props) => {
-  console.log(props);
   const { markdownRemark } = props.data;
   const title = markdownRemark.frontmatter.title;
   const date = markdownRemark.frontmatter.date;
@@ -18,7 +17,6 @@ const Post = (props) => {
     title: title,
   };
 
-  console.log(disqusConfig);
   return (
     <Layout>
       <Helmet>

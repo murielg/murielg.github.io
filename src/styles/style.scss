@@ -1,5 +1,4 @@
 @import "~@fortawesome/fontawesome-svg-core/styles.css";
-
 html, body {
   background-color: #0E1025;
   color: white;
@@ -21,7 +20,7 @@ a {
 
 .container {
   margin: 0 auto;
-  max-width: 35rem;
+  max-width: 45rem;
   padding: 0 1em;
 }
 
@@ -124,4 +123,18 @@ footer {
   p {
     margin-top: 40px;
   }
+}
+
+pre[class*="language-"] {
+  background: #212532;
+  padding: 2em 2em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: 0.5em;
+}
+
+
+code[class*="language-"] {
+  background: none;
+  box-shadow: none;
 }

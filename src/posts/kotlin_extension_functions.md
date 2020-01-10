@@ -67,7 +67,7 @@ fun printClassName(v: Vehicle) {
     println(v.getName())
 }
 
-printClassName(Truck())} // prints Vehicle
+printClassName(Truck()) // prints Vehicle
 ```
 The above snippet outputs **Vehicle** because the extension function `getName()` is determined by the declared type of the `v` parameter, which is of the `Vehicle` class.
 
