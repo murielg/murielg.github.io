@@ -36,5 +36,13 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       }
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Roboto Mono:400,700']
+        }
+      }
+    }
   ]
 };

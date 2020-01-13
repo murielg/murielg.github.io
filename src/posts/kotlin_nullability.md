@@ -1,7 +1,7 @@
 ---
 path: "/blog/kotlin_nullability"
 slug: "kotlin-nullability"
-title: "Nullability and Null Safety in Kotlin"
+title: "Null Safety in Kotlin"
 date: 2020-01-13
 tags: ['kotlin']
 ---
