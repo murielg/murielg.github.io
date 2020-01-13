@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 
 const Index = ({data}) => {
   const { edges } = data.allMarkdownRemark;
-
+  const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
       <Helmet>

@@ -9,7 +9,7 @@ exports.createPages = (({graphql, actions}) => {
     resolve(
       graphql(
         ` query {
-               allMarkdownRemark  {
+               allMarkdownRemark {
                 edges {
                   node {
                     frontmatter {
