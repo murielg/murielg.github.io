@@ -6,16 +6,16 @@ date: 2020-01-13
 tags: ['kotlin']
 ---
 
-Coming from a Java background,like most Android devs, it is such a relief to work with Kotlin’s type system.
-`NullPointerException` os NPE hell is something I am very happy to do away with as I get more used to working with Kotlin.
+Coming from a Java background, like most Android devs, it is such a relief to work with Kotlin’s type system.
+`NullPointerException` hell is something I am very happy to do away with as I get more comfortable with working safely with Kotlin.
 
-If we want to access a property, the compiler reports an error:
+
 ```kotlin
 val item: MediaItem? = null
 item.print() // ❌ this won't compile 👎
 ```
-
-In order to access properties on nullable types, Kotlin gives us some options:
+When Trying to access a property like above, the compiler reports an error🎉
+So in order to properly work with nullable types, we have some options:
 
 ### 1. Check for `null` - This is the same approach as we do so often in Java
 ```kotlin
@@ -34,8 +34,11 @@ item?.print() // ✅
 ### 3. With the elvis operator `?:`, we can assign a non-null value when our reference is of nullable type:
 ```kotlin
 val myInt: Int? = null
-val myLong: Long = myInt?.toLong() ?: 0L // give alternative value in case myInt is null
-val myLong2 : Long = if (myInt != null) myInt else 0L // equivalent to expression above
+// give alternative value in case myInt is null
+val myLong: Long = myInt?.toLong() ?: 0L
+
+// this is the equivalent to expression above
+val myLong2 : Long = if (myInt != null) myInt else 0L
 ```
 
 ### 4. Lastly, we have the dreaded `!!` operator. ⚠️ This not-null assertion operator is really dangerous, so only use it if when…
@@ -48,4 +51,8 @@ item!!print() // 😾 will throw exception if value is null
 
 ```
 
-Learn more about null safety in Kotlin here [Null safety - Kotlin Programming Language](https://kotlinlang.org/docs/tutorials/kotlin-for-py/null-safety.html)
+Thanks for reading!
+
+
+
+You can learn more about null safety in Kotlin here [Null safety - Kotlin Programming Language](https://kotlinlang.org/docs/tutorials/kotlin-for-py/null-safety.html)
