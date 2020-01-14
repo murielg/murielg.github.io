@@ -5,18 +5,21 @@ title: "npm as a build tool"
 date: 2015-06-01
 tags: ['npm', 'javascript', 'package-managers']
 ---
+<br>
 
-<blockquote>
-<p>For many years, JavaScript had a single widely accepted module format, which is to say there was none. Everything was a global variable, petulantly hanging off the window object. This invited risky propositions, too sweet to ignore, and some of us began monkey-patching built-in objects. Chaos prevailed. We had run amok. The JavaScript of that era was nightmarish, intertwined, lacking order and utterly without remorse.
-</p>
- <footer><a href="https://medium.com/@brianleroux" target="_blank">@brianleroux</a></footer>
-</blockquote>
+<mark>UPDATE</mark>
+
+This is a rather old post, and while all of points of this post still stand, I recommend you look into Webpack and/or Parcel for managing your dependencies and build scripts in your front-end development projects.
+
+---
+
+<br>
 
 Browsers haven’t had a really good way of loading modules (not yet, at least, but let’s forget about ES6 for a minute). So developing large JavaScript applications, especially those that have many dependencies and intricacies, became a very challenging task. In true JavaScript fashion, there isn’t only one way to write modular code. The most well-known formats are AMD and CommonJS. AMD is more widely used in the browser, while CommonJS has mostly been used server-side. While I won’t go into detail about either of these formats, simply put, AMD and CommonJS are two different ways of bundling JavaScript with the goal of making it modular. AMD was eventually made popular by RequireJS, while CommonJS (or at least a version of it) was adopted by the Node community.
 
 CommonJS happens to have really simple syntax, and while it doesn’t naturally work in the browser like AMD does, this problem gets solved when you combine CommonJS with module bundlers such as Browserify or Webpack. But more on module bundlers later.
 
-If you are interested in understanding modules, I recommend you read chapter 10 of <em><a href="http://eloquentjavascript.net/" target="_blank">Eloquent JavaScript: A Modern Introduction to Programming</a></em> by Marijn Haverbeke to be enlightened in this matter.
+If you are interested in understanding modules, I recommend you read chapter 10 of <em><a href="http://eloquentjavascript.net/" target="_blank">Eloquent JavaScript: A Modern Introduction to Programming</a></em> by Marijn Haverbeke to be enlightened in this topic.
 
 ## Task Runners + Package Managers
 

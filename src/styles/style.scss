@@ -1,4 +1,6 @@
+@import '~bootstrap/scss/bootstrap.scss';
 @import "~@fortawesome/fontawesome-svg-core/styles.css";
+
 html, body {
   background-color: #0E1025;
   color: white;
@@ -39,6 +41,31 @@ header {
     font-size: 1em;
     font-weight: 400;
   }
+  nav {
+    margin: 20px 0;
+    ul {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+      }
+    }
+    a {
+      display: block;
+      margin: 0 20px 0 20px;
+      padding: 16px 20px;
+      color:#AAAAAA;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &.active {
+        color: white;
+        background-color: #FF159E;
+
+      }
+    }
+  }
 }
 
 article.post {
@@ -78,34 +105,6 @@ ul.tags {
   }
 }
 
-header {
-  nav {
-    margin: 20px 0;
-    ul {
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      li {
-        display: inline-block;
-      }
-    }
-    a {
-      display: block;
-      margin: 0 20px 0 20px;
-      padding: 16px 20px;
-      color:#AAAAAA;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      &.active {
-        color: white;
-        background-color: #FF159E;
-
-      }
-    }
-  }
-}
-
 footer {
   text-align: center;
   margin-top: 20px;
@@ -134,7 +133,6 @@ pre[class*="language-"] {
   border-radius: 0.5em;
 }
 
-
 code[class*="language-"] {
   background: none;
   box-shadow: none;
@@ -143,4 +141,15 @@ code[class*="language-"] {
 :not(pre) > code[class*="language-"] {
   background: #212532;
   color: yellowgreen;
+}
+
+// Markdown
+hr {
+  border-top: solid 1px #999999;
+}
+
+mark, .mark {
+  background-color: #E2F039;
+  color: black;
+  padding: 0.5em;
 }
