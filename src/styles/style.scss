@@ -10,7 +10,7 @@ html, body {
 }
 
 html {
-  border-top: 3px solid #FF159E;
+  //border-top: 3px solid #FF159E;
 }
 
 a {
@@ -26,23 +26,30 @@ a {
   padding: 0 1em;
 }
 
-header {
-  padding-top: 40px;
- h1,h3 {
-   text-align: center;
- }
-  h1 {
-    font-weight: 400;
-    font-size: 2em;
-    margin-bottom: 0;
-  }
-  h3 {
-    color: #E2F039;
-    font-size: 1em;
-    font-weight: 400;
+.header-container {
+  header {
+    padding-top: 40px;
+    text-align: center;
+    h1 {
+      font-weight: 400;
+      font-size: 1.25em;
+      margin-bottom: 30px;
+    }
+    h3 {
+      color: #E2F039;
+      font-size: 1em;
+      font-weight: 400;
+    }
+
+    img.logo {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
   }
   nav {
-    margin: 20px 0;
+    margin: 20px 0 30px 0;
     ul {
       text-align: center;
       margin: 0;
@@ -61,7 +68,8 @@ header {
 
       &.active {
         color: white;
-        background-color: #FF159E;
+        //background-color: #FF159E;
+        border-bottom: 2px solid #FF159E;
 
       }
     }
@@ -78,6 +86,7 @@ article.post {
 }
 a.post-title {
   font-size: 1.25em;
+  font-weight: bold;
 }
 
 p.post-date {

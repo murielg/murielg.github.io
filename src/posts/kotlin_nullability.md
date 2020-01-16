@@ -6,16 +6,19 @@ date: 2020-01-13
 tags: ['kotlin']
 ---
 
-As an android developer, it is so enjoyable to work with Kotlin’s type system. `NullPointerException` hell is something I am very glad to do away with, so with Kotlin's nullability support we are able to work not just more elegantly, but also avoiding dreaded NPEs.
-In this post, I will briefly cover Kotlin's awesome built in null safety features that will make your NPE-less life a lot more pleasant 😄
+As an android dev, it is very enjoyable working with Kotlin’s type system. With Kotlin's nullability support, it becomes much easier to avoid the `NullPointerException` hell that is so common when developing in Java.
 
-A nullable type is any data type able to have `null` as its value. In Kotlin, we declare a nullable type with a question mark, `?`
+In this post, I will cover Kotlin's awesome built in null safety features and give some examples on how to use them.
+
+In Kotlin, we declare a nullable type with a question mark `?`:
 
 ```kotlin
 val item: MediaItem? = null
 item.print() // ❌ this won't compile 👎
 ```
-When accessing the property of a nullable variable, the type checker will report an error and the code won't compile. In order to properly test and work with nullable types, we have some options:
+When accessing the property of a nullable variable, the compiler's type checker will report an error and the code just won't compile.
+
+In order to properly test and work with nullable types, we have some options:
 
 ### 1. Check for `null`
 This is the same approach as we do so often in Java

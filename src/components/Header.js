@@ -1,16 +1,18 @@
 import React, {Fragment} from 'react';
 import {graphql, Link, StaticQuery} from 'gatsby';
 import Nav from './Nav';
+import logo from "../assets/mg.png";
+
 const Header = ({data}) => {
   const {title, description} = data.site.siteMetadata;
   return (
-    <Fragment>
+    <div className="header-container">
       <header>
+        <img className='logo' src={logo} alt="Logo" />
         <h1>{title}</h1>
-        <h3>{description}</h3>
-        <Nav/>
       </header>
-    </Fragment>
+      <Nav/>
+    </div>
   )
 };
 

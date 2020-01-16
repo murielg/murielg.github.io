@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Muriel Gonzalez',
+    title: 'blog by muriel gonzalez',
     description: 'web and mobile developer',
     url: `https://murielg.github.io`,
   },
@@ -43,6 +43,18 @@ module.exports = {
           families: ['Roboto Mono:400,700']
         }
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/assets/favicon.ico`
+      },
+    },
   ]
 };

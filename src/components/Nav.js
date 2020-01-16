@@ -5,7 +5,7 @@ const Nav = (props) => {
     <nav>
       <ul>
         <li>
-          <Link to='/' activeClassName="active">blog</Link>
+          <Link to='/' activeClassName="active">posts</Link>
         </li>
         <li>
           <Link to='/about' activeClassName="active">about</Link>
