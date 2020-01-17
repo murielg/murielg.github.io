@@ -50,10 +50,10 @@ module.exports = {
         name: `GatsbyJS`,
         short_name: `GatsbyJS`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `#0e1025`,
+        theme_color: `#FD487E`,
         display: `standalone`,
-        icon: `src/assets/favicon.ico`
+        icon: `src/assets/mg.png`
       },
     },
   ]
