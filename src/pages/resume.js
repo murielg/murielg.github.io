@@ -1,19 +1,17 @@
 import React from "react"
 import Layout from '../components/layout';
+import data from "../../content/data.json";
+
 const ResumePage = () => (
   <Layout>
     <div className='resume container-fluid'>
       <div className="row">
         <div className="col-12">
-          <h2>Skills</h2>
+          <h2>{data.title}</h2>
           <ul>
-            <li>Core: Java, Kotlin, Android SDK, Gradle, Jetpack, AndroidX, AAC</li>
-            <li>Architecture Patterns: Clean Architecture, MVP and MVVM</li>
-            <li>Asynchronous and Networking: Coroutines, RxJava2, Retrofit, Gson, Moshi</li>
-            <li>Persistence: Room, SQLite, Firebase</li>
-            <li>Dependency Injection: Dagger2, Koin</li>
-            <li>Libraries: Butterknife, Picasso, Glide, Timber, ExoPlayer</li>
-            <li>Continuous Integration: Git, Teamcity, Jenkins, Gitlab CI/CD, Fastlane</li>
+            {data.skills.map((data, index) => {
+              return <li key={`content_skill_${index}`}>{data}</li>
+            })}
           </ul>
         </div>
       </div>

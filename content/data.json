@@ -1,0 +1,12 @@
+{
+  "skills" : [
+    "Core: Java, Kotlin, Android SDK, Gradle, Jetpack, AndroidX, AAC",
+    "Architecture Patterns: Clean Architecture, MVP and MVVM",
+    "Asynchronous and Networking: Coroutines, RxJava2, Retrofit, Gson, Moshi",
+    "Persistence: Room, SQLite, Firebase",
+    "Dependency Injection: Dagger2, Koin",
+    "Libraries: Butterknife, Picasso, Glide, Timber, ExoPlayer",
+    "Continuous Integration: Git, Teamcity, Jenkins, Gitlab CI/CD, Fastlane"
+  ]
+
+}
