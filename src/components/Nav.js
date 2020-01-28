@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import  { Link } from 'gatsby';
 const Nav = (props) => {
   return (
@@ -8,7 +8,7 @@ const Nav = (props) => {
           <Link to='/' activeClassName="active">posts</Link>
         </li>
         <li>
-          <Link to='/about' activeClassName="active">about</Link>
+          <Link to='/about/' activeClassName="active">about</Link>
         </li>
       </ul>
     </nav>
