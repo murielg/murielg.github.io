@@ -4,7 +4,7 @@
 html, body {
   background-color: #000000;
   color: white;
-  font-family: 'Fira Sans', monospace;
+  font-family: 'Fira Sans', sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -28,7 +28,7 @@ a {
 
 .header-container {
   header {
-    padding-top: 40px;
+    margin: 40px 0;
     text-align: center;
     h1 {
       font-weight: 800;
@@ -71,19 +71,18 @@ a {
       text-transform: uppercase;
       font-weight: 600;
       font-style: italic;
-      box-shadow: 0.5rem 0.5rem 0 #353535;
+      box-shadow: 0.45rem 0.45rem 0 #353535;
       border: 1px solid #353535;
 
       &.active {
         color: white;
         font-weight: 900;
-        box-shadow: 0.5rem 0.5rem 0 #FF159E;
-        border: 1px solid white;
+        box-shadow: 0.45rem 0.45rem 0 #FF159E;
       }
       &:hover {
         color: white;
         font-weight: 900;
-        box-shadow: 0.5rem 0.5rem 0 #E2F039;
+        box-shadow: 0.45rem 0.45rem 0 #E2F039;
         border: 1px solid white;
       }
     }
@@ -102,7 +101,7 @@ article.post {
   padding: 20px;
   color: #E2F039;
   background: none;
-  box-shadow: 0.5rem 0.5rem 0 #FF159E;
+  box-shadow: 0.45rem 0.45rem 0 #FF159E;
   border: 1px solid white;
   margin: 20px auto 40px;
   max-width: 30rem;
@@ -123,19 +122,17 @@ p.post-date {
 
 .bio {
   text-align: center;
-
+  box-shadow: 0.45rem 0.45rem 0 #FF159E;
+  border: 1px solid white;
+  padding: 40px;
 
   p {
-    font-weight: 900;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    font-size: 1.5rem;
     text-transform: uppercase;
   }
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 20px;
-  }
 }
 
 ul.tags {
