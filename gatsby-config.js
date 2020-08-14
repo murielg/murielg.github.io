@@ -40,7 +40,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Roboto Mono:400,700']
+          families: ['Roboto Mono:400,700', 'Fira Sans:400,500,600,800,900']
         }
       }
     },

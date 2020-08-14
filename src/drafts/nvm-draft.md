@@ -1,34 +1,29 @@
 ---
-path: "/blog/how-i-nvm"
-title: "NVM Tips and Tricks"
+path: "/blog/nvm-"
+title: "NVM Stuff"
 date: 2020-01-31
 tags: ['tags', 'for', 'post']
 ---
 
-- What is NVM
-- How to Install
-- Managing different versions 
-- Common Issues
+# node, nvm, npm pain points solved
 
+### Problem: slow terminal
 
-### Problem: slow terminal. nvm might be the culprit
-#### Solution: node or npm is first executed during the current terminal session. 
+Nvm might be just be the culprit of your terminal session taking forever to start.
 
-Wne you first install NVM
-this is added to your bashrc file, or zshrc file
+Wne you first install NVM, this is added to your bashrc, or zshrc file:
 ```
 # nvm
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 ```
 
-However, it really bogs down the terminal and it adds a long time
+But nobody tells you that this can really bog down the terminal every time you start a new session.
 
+#### Solution: lazy load nvm
 
-```zshrc
-...
-
+```
 # nvm
 export NVM_DIR="$HOME/.nvm"
  nvm_load () {
@@ -39,23 +34,22 @@ export NVM_DIR="$HOME/.nvm"
  alias npm='unalias nvm; unalias node; unalias npm; nvm_load; npm $@'
  alias nvm='unalias nvm; unalias node; unalias npm; nvm_load; nvm $@'
 
-###########
-
-...
-
 ```
+Source: http://broken-by.me/lazy-load-nvm/
+
+Rejoice!
 
 ---
-# Get a list of global NPM packages
 
+### List global npm packages for current node version
 
 `npm list -g --depth 0`
 
+---
 
+### Upgrading NPM (with NVM)
 
-## Upgrading NPM via NVM
-
-Sometimes you will see message prompting you to update NPM. `Run npm install -g npm to update!` 
+Sometimes you will see message prompting you to update NPM. `Run npm install -g npm to update!`
 ```bash
    ╭────────────────────────────────────────────────────────────────╮
    │                                                                │
@@ -69,13 +63,6 @@ Sometimes you will see message prompting you to update NPM. `Run npm install -g 
 - navigate to nvm's node lib folder
 - (replace v8.4.0 with your version)
 `cd ~/.nvm/versions/node/v8.4.0/lib/`
-
 - update npm right there
 `npm install npm`
-
 - reopen your terminal
-
-
-References: 
-- http://broken-by.me/lazy-load-nvm/
-- https://www.keycdn.com/blog/node-version-manager

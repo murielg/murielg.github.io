@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import {graphql, Link, StaticQuery} from 'gatsby';
 import Nav from './Nav';
-import logo from "../assets/mg.png";
+import logo from "../assets/mg_logo_2020_pink_transparent.png";
 
 const Header = ({data}) => {
   const {title, description} = data.site.siteMetadata;
@@ -10,6 +10,7 @@ const Header = ({data}) => {
       <header>
         <img className='logo' src={logo} alt="Logo" />
         <h1>{title}</h1>
+        <h2>{description}</h2>
       </header>
       <Nav/>
     </div>

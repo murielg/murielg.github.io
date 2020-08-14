@@ -5,7 +5,7 @@ const AboutPage = () => (
     <div className='bio'>
       <p>👋Hello There!</p>
       <p>I'm Muriel, nice to meet you! </p>
-      <p>📍 I live in Dallas, TX and I love developing apps and techy things 📱</p>
+      <p>📍 I live in Dallas, TX and I love developing apps, websites and techy things 📱</p>
       <p>💛 Some of the other things I'm passionate about are:<br/></p>
       <ul>
         <li>😸cats</li>

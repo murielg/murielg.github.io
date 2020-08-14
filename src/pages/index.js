@@ -14,11 +14,12 @@ const Index = ({data}) => {
       {edges.map(edge => {
         const { frontmatter } = edge.node;
         return  (
+          <Link to={frontmatter.path} className="article-link">
           <article className='post' key={frontmatter.path}>
 
-            <Link to={frontmatter.path} className='post-title'>
-              {frontmatter.title}
-            </Link>
+
+            <h2 className="post-title">{frontmatter.title}</h2>
+
             <ul className='tags'>
             {frontmatter.tags.map(tag => (
                 <li key={tag}>
@@ -31,6 +32,7 @@ const Index = ({data}) => {
             </p>
 
           </article>
+          </Link>
         )
       })}
     </Layout>

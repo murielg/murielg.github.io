@@ -2,9 +2,9 @@
 @import "~@fortawesome/fontawesome-svg-core/styles.css";
 
 html, body {
-  background-color: #0E1025;
+  background-color: #000000;
   color: white;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Fira Sans', monospace;
   padding: 0;
   margin: 0;
 }
@@ -31,25 +31,29 @@ a {
     padding-top: 40px;
     text-align: center;
     h1 {
-      font-weight: 400;
+      font-weight: 800;
+      letter-spacing: 1.2px;
       font-size: 1.25em;
-      margin-bottom: 30px;
+      text-transform: uppercase;
     }
-    h3 {
+    h2 {
       color: #E2F039;
       font-size: 1em;
-      font-weight: 400;
+      font-weight: 600;
+      font-style: italic;
+      text-transform: uppercase;
+
     }
 
     img.logo {
       width: 100px;
       height: auto;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
   }
   nav {
-    margin: 20px 0 30px 0;
+    margin: 20px 0 50px 0;
     ul {
       text-align: center;
       margin: 0;
@@ -62,31 +66,53 @@ a {
       display: block;
       margin: 0 20px 0 20px;
       padding: 16px 20px;
-      color:#AAAAAA;
+      color:#353535;
       text-decoration: none;
       text-transform: uppercase;
+      font-weight: 600;
+      font-style: italic;
+      box-shadow: 0.5rem 0.5rem 0 #353535;
+      border: 1px solid #353535;
 
       &.active {
         color: white;
-        //background-color: #FF159E;
-        border-bottom: 2px solid #FF159E;
-
+        font-weight: 900;
+        box-shadow: 0.5rem 0.5rem 0 #FF159E;
+        border: 1px solid white;
+      }
+      &:hover {
+        color: white;
+        font-weight: 900;
+        box-shadow: 0.5rem 0.5rem 0 #E2F039;
+        border: 1px solid white;
       }
     }
   }
 }
+a.article-link {
+  text-decoration: none;
+  &:hover {
+    article.post {
+      box-shadow: 0.5rem 0.5rem 0 #E2F039;
+    }
+  }
 
+}
 article.post {
   padding: 20px;
   color: #E2F039;
-  background-color: #1C1E4E;
-  margin: 20px auto;
+  background: none;
+  box-shadow: 0.5rem 0.5rem 0 #FF159E;
+  border: 1px solid white;
+  margin: 20px auto 40px;
   max-width: 30rem;
-
 }
-a.post-title {
+h2.post-title {
   font-size: 1.25em;
-  font-weight: bold;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 p.post-date {
@@ -98,9 +124,12 @@ p.post-date {
 .bio {
   text-align: center;
 
-  p {
 
+  p {
+    font-weight: 900;
+    text-transform: uppercase;
   }
+
   ul {
     list-style: none;
     margin: 0;
@@ -115,9 +144,8 @@ ul.tags {
   li {
     list-style: none;
     display: inline;
-    color: #AAAAAA;
+    color: #FFFFFF;
     margin-right: 10px;
-    font-size: 1em;
   }
 }
 
