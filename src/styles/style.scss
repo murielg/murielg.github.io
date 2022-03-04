@@ -2,8 +2,8 @@
 @import "~@fortawesome/fontawesome-svg-core/styles.css";
 
 html, body {
-  background-color: #000000;
-  color: white;
+  background-color: #ffffff;
+  color: black;
   font-family: 'Fira Sans', sans-serif;
   padding: 0;
   margin: 0;
@@ -14,7 +14,7 @@ html {
 }
 
 a {
-  color: #E2F039;
+  color: #000000;
   &:hover {
     color: #FF159E;
   }
@@ -37,7 +37,7 @@ a {
       text-transform: uppercase;
     }
     h2 {
-      color: #E2F039;
+      color: #000000;
       font-size: 1em;
       font-weight: 600;
       font-style: italic;
@@ -65,72 +65,73 @@ a {
     a {
       display: block;
       margin: 0 20px 0 20px;
-      padding: 16px 20px;
-      color:#353535;
+      height: 40px;
+      padding: 0 20px;
+      color: black;
+      line-height: 40px;
+      min-width: 120px;
       text-decoration: none;
       text-transform: uppercase;
       font-weight: 600;
       font-style: italic;
-      box-shadow: 0.45rem 0.45rem 0 #353535;
+      box-shadow: 0.4rem 0.4rem 0 black;
       border: 1px solid #353535;
-
+      border-radius: 20px;
+      transition: scale .3s ease-in-out;
       &.active {
-        color: white;
-        font-weight: 900;
-        box-shadow: 0.45rem 0.45rem 0 #FF159E;
+        color: black;
+        box-shadow: 0.4rem 0.4rem 0 #FF159E;
       }
       &:hover {
-        color: white;
-        font-weight: 900;
-        box-shadow: 0.45rem 0.45rem 0 #E2F039;
-        border: 1px solid white;
+
+        transform: scale(1.025);
       }
     }
   }
 }
 a.article-link {
   text-decoration: none;
-  &:hover {
-    article.post {
-      box-shadow: 0.5rem 0.5rem 0 #E2F039;
-    }
-  }
-
 }
 article.post {
   padding: 20px;
-  color: #E2F039;
-  background: none;
-  box-shadow: 0.45rem 0.45rem 0 #FF159E;
-  border: 1px solid white;
+  color: black;
+  background: #FF159E;
+  box-shadow: 0.45rem 0.45rem 0 black;
+  border: 1px solid black;
+  border-radius: 20px;
   margin: 20px auto 40px;
   max-width: 30rem;
-}
-h2.post-title {
-  font-size: 1.25em;
-  letter-spacing: 1.2px;
-  font-weight: 800;
-  font-style: italic;
-  text-transform: uppercase;
+  transition: all .3s ease;
+  &:hover {
+    transform: scale(1.025);
+  }
+
+  h2.post-title {
+    font-size: 1.25em;
+    letter-spacing: 1.2px;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
+  p.post-date {
+    text-align: right;
+    margin: 0;
+    color: black;
+    display: none;
+  }
 }
 
-p.post-date {
-  text-align: right;
-  margin: 0;
-  color: white;
-}
 
 .bio {
   text-align: center;
   box-shadow: 0.45rem 0.45rem 0 #FF159E;
-  border: 1px solid white;
+  border: 1px solid black;
   padding: 40px;
+  border-radius: 20px;
 
   p {
-    font-weight: 800;
     letter-spacing: 1.2px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
   }
 
 }
@@ -138,10 +139,13 @@ p.post-date {
 ul.tags {
   padding: 0;
   margin-bottom: 0;
+  text-align: right;
+  font-size: 14px;
+  font-style: italic;
   li {
     list-style: none;
     display: inline;
-    color: #FFFFFF;
+    color: black;
     margin-right: 10px;
   }
 }
@@ -151,7 +155,7 @@ footer {
   margin-top: 50px;
   nav {
     a {
-      color: white;
+      color: #FF159E;
       font-size: 2rem;
       padding: 10px;
       margin: 0 20px;
