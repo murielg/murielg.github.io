@@ -1,0 +1,115 @@
+:root {
+    --color-background: #fff7e5;
+    --color-surface: #f8f9fa;
+    --color-surface-variant: #e8f0fe;
+    --color-on-background: #202124;
+    --color-on-surface: #202124;
+    --color-on-surface-variant: #5f6368;
+
+    --color-primary: #1a73e8;
+    --color-on-primary: #ffffff;
+    --color-secondary: #1ab659;
+    --color-on-secondary: #ffffff;
+    --color-tertiary: #4285f4;
+    --color-on-tertiary: #ffffff;
+
+    --color-footer: #fa48ba;
+    --color-on-footer: #ffffff;
+
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background: var(--color-background);
+    background-attachment: fixed;
+    color: var(--color-on-background);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 1rem;
+}
+
+main.container {
+    flex: 1;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    padding: 2rem;
+    align-content: center;
+}
+h1 {
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+p {
+    margin-bottom: 2.5rem;
+}
+
+p b {
+    color: var(--color-secondary);
+}
+
+footer {
+    background-color: var(--color-footer);
+    color: var(--color-on-footer);
+    width: 100%;
+    padding: 0.5rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 5;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 0;
+}
+
+footer a:link, footer a:visited {
+    color: var(--color-on-footer);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    main.container {
+        margin-bottom: 5rem;
+    }
+
+    footer p {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
