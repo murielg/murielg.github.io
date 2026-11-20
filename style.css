@@ -1,115 +1,205 @@
 :root {
-    --color-background: #fff7e5;
-    --color-surface: #f8f9fa;
-    --color-surface-variant: #e8f0fe;
-    --color-on-background: #202124;
-    --color-on-surface: #202124;
-    --color-on-surface-variant: #5f6368;
-
-    --color-primary: #1a73e8;
-    --color-on-primary: #ffffff;
-    --color-secondary: #1ab659;
-    --color-on-secondary: #ffffff;
-    --color-tertiary: #4285f4;
-    --color-on-tertiary: #ffffff;
-
-    --color-footer: #fa48ba;
-    --color-on-footer: #ffffff;
-
-    --border-radius-sm: 4px;
-    --border-radius-md: 8px;
-    --border-radius-lg: 16px;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    height: 100%;
-    position: relative;
+    --cream: #fff7e5;
+    --pink: #fa48ba;
+    --pink-hover: #c3237a;
+    --ink: #18231b;
+    --link: #10271a;
+    --gutter: clamp(1.25rem, 6.5vw, 4.25rem);
 }
 
 body {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    background: var(--color-background);
-    background-attachment: fixed;
-    color: var(--color-on-background);
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    flex-direction: column;
     margin: 0;
-    padding: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font: 1rem/1.55 "Atkinson Hyperlegible Next", system-ui, sans-serif;
 }
 
-header {
-    padding: 1rem;
+.container {
+    box-sizing: border-box;
+    max-width: 70rem;
+    margin-inline: auto;
+    padding-inline: var(--gutter);
 }
 
-main.container {
-    flex: 1;
-    max-width: 700px;
-    margin: 0 auto 4rem;
-    padding: 2rem;
-    align-content: center;
-}
-h1 {
-    margin-bottom: 2rem;
-    font-weight: 600;
-}
-p {
-    margin-bottom: 2.5rem;
+.hero {
+    --highlights:
+        linear-gradient(to top, var(--cream), #fff7e5a6 7%, #fff7e500 23%),
+        radial-gradient(ellipse 83% 101% at 1% 21%, var(--cream) 7%, #fff7e5ed 29%, #fff7e5a6 57%, #fff7e500 91%);
+    --gradient-stops:
+        var(--pink) 0%, #f38fb7 34%, #f6b9c5 46%, #f5c8b6 57%,
+        #efd7ad 65%, #f1ddc5 74%, #f0e3c9 85%, #ede6cc 100%;
+
+    padding-block: 1.5rem clamp(3.5rem, 8vw, 5.3rem);
+    background-image: var(--highlights),
+        radial-gradient(ellipse 118% 135% at 91% -34%, var(--gradient-stops));
 }
 
-p b {
-    color: var(--color-secondary);
+@supports (background-image: radial-gradient(in oklab, #000, #fff)) {
+    .hero {
+        background-image: var(--highlights),
+            radial-gradient(ellipse 118% 135% at 91% -34% in oklab, var(--gradient-stops));
+    }
 }
 
-footer {
-    background-color: var(--color-footer);
-    color: var(--color-on-footer);
-    width: 100%;
-    padding: 0.5rem 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    z-index: 5;
-}
-
-footer p {
+.masthead {
     display: flex;
-    justify-content: center;
-    gap: 4rem;
-    margin: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    color: var(--link);
+    font: 700 0.8125rem/1.5 ui-monospace, monospace;
 }
 
-footer a:link, footer a:visited {
-    color: var(--color-on-footer);
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius-sm);
-    transition: background-color 0.2s ease;
+.location-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-weight: 500;
     text-decoration: none;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.location-link:hover,
+.location-link:focus-visible {
+    text-decoration: underline 1px;
 }
 
-@media (max-width: 600px) {
-    main.container {
-        margin-bottom: 5rem;
+.location-link:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 3px;
+}
+
+.intro {
+    padding-block-start: clamp(2.2rem, 6vw, 4.2rem);
+}
+
+.intro-heading {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.75rem, 2.25vw, 1.5rem);
+}
+
+.portrait {
+    flex: none;
+    display: block;
+    inline-size: clamp(7.5rem, 12.75vw, 9.5rem);
+    block-size: auto;
+    /* Follow the pink disc inside the source image. */
+    clip-path: circle(48.9% at 49.8% 50.1%);
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2.25rem, 7.25vw, 4.7rem);
+    line-height: 1.07;
+}
+
+.name-and-wave {
+    white-space: nowrap;
+}
+
+.emoji {
+    inline-size: 1.2em;
+    block-size: auto;
+    vertical-align: -0.2em;
+}
+
+.wave {
+    inline-size: 1em;
+    margin-inline-start: 0.22em;
+    font-size: 0.6em;
+    vertical-align: 0.04em;
+}
+
+.intro p {
+    max-width: 57ch;
+    margin: 0.75rem 0 0;
+}
+
+.intro .role {
+    margin-block-start: 0.35rem;
+    font-weight: 700;
+    font-size: clamp(1.05rem, 2.3vw, 1.25rem);
+}
+
+.intro-heading + p {
+    margin-block-start: 1.1rem;
+}
+
+a {
+    color: var(--link);
+    text-decoration: underline solid var(--pink) 2px;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 0.23em;
+}
+
+a:hover {
+    text-decoration-color: var(--pink-hover);
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1rem;
+    margin-block-start: 0.7rem;
+    font-weight: 650;
+}
+
+.social-links a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25em;
+    min-height: 44px;
+    text-decoration: none;
+}
+
+.social-links a::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: 0.45rem;
+    border-block-end: 3px solid var(--pink);
+    pointer-events: none;
+}
+
+.social-links a:hover::after {
+    border-color: var(--pink-hover);
+}
+
+@media (max-width: 36rem) {
+    .intro-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.65rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    :root {
+        --gutter: 1rem;
     }
 
-    footer p {
-        flex-direction: column;
-        gap: 0.5rem;
+    .hero {
+        padding-block: 1rem 2rem;
+    }
+
+    .intro {
+        padding-block-start: 1.4rem;
+    }
+
+    .intro p {
+        margin-block-start: 0.65rem;
+    }
+
+    .role a {
+        white-space: nowrap;
+    }
+
+    .intro-heading + p {
+        margin-block-start: 0.9rem;
+    }
+
+    .social-links {
+        margin-block-start: 0.5rem;
     }
 }
