@@ -9,22 +9,22 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
     <meta name="theme-color" content="#fff7e5">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400..700&amp;display=swap">
-    <link rel="stylesheet" href="style.css?v=20">
+    <link rel="stylesheet" href="style.css?v=28">
     <!-- Twemoji graphics © 2019 Twitter, Inc. and other contributors, used unmodified under CC BY 4.0.
          Source: https://www.npmjs.com/package/@twemoji/svg/v/15.0.0
          License: https://creativecommons.org/licenses/by/4.0/ -->
 </head>
 <body>
-    <main class="hero">
-        <div class="container">
-            <header class="masthead">
+    <main>
+        <div class="hero">
+            <header class="masthead container">
                 <span>murielg.dev</span>
                 <a class="location-link" href="https://www.google.com/maps/search/?api=1&amp;query=Bozeman%2C+Montana" target="_blank" rel="noopener noreferrer" aria-label="Bozeman, Montana on Google Maps">
                     <span><img class="emoji" src="emoji/round-pushpin.svg" width="36" height="36" alt=""> Bozeman, Montana <span aria-hidden="true">↗</span></span>
                 </a>
             </header>
 
-            <div class="intro">
+            <div class="intro container" id="bio" tabindex="-1">
                 <div class="intro-heading">
                     <img class="portrait" src="pfp.webp?v=3" width="528" height="528" alt="Illustrated portrait of Muriel Gonzalez">
                     <div>
@@ -38,11 +38,33 @@
                 <p>Outside of work I enjoy playing video games, chess, hiking, paddleboarding and going on road trips <img class="emoji" src="emoji/sport-utility-vehicle.svg" width="36" height="36" alt=""></p>
 
                 <nav class="social-links" aria-label="Find Muriel online">
-                    <a href="https://github.com/murielg" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-                    <a href="https://www.linkedin.com/in/murielgonzalez/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                    <a class="external-link" href="https://github.com/murielg" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    <a class="external-link" href="https://www.linkedin.com/in/murielgonzalez/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
                 </nav>
             </div>
         </div>
+
+        <section class="projects container" aria-labelledby="projects-title">
+            <div class="projects-inner">
+                <h2 id="projects-title">Projects</h2>
+                <img class="project-logo" src="chess-lab-logo.svg" width="48" height="48" alt="ChessLab logo">
+                <h3>ChessLab</h3>
+                <p>Chess training apps for learning checkmate patterns. Three Lichess puzzles a day, with spaced repetition bringing the weakest patterns back first.</p>
+                <ul class="project-features">
+                    <li>18 checkmate patterns, from back-rank mate to Balestra</li>
+                    <li>Mates in 1 to 5, solved move by move</li>
+                    <li>Separate apps built on a single shared core</li>
+                    <li>REST API with OpenAPI docs, test-driven against PostgreSQL</li>
+                </ul>
+                <ul class="project-stack" role="list" aria-label="Technology stack">
+                    <li>TypeScript</li>
+                    <li>Deno</li>
+                    <li>Hono</li>
+                    <li>PostgreSQL</li>
+                    <li>OpenAPI</li>
+                </ul>
+            </div>
+        </section>
     </main>
 
 </body>
