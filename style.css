@@ -1,5 +1,6 @@
 :root {
     --cream: #fff7e5;
+    --rose: #bd758e;
     --pink: #fa48ba;
     --pink-hover: #c3237a;
     --ink: #18231b;
@@ -197,13 +198,18 @@ a:hover {
     margin: 0.85rem 0 0;
 }
 
-.project-features {
+.project-apps {
     margin: 0.65rem 0 0;
-    padding-inline-start: 1.25rem;
+    padding: 0;
+    list-style: none;
 }
 
-.project-features li + li {
-    margin-block-start: 0.2rem;
+.project-apps li + li {
+    margin-block-start: 0.35rem;
+}
+
+.project-apps strong {
+    margin-inline-end: 0.25em;
 }
 
 .project-stack {
@@ -213,13 +219,19 @@ a:hover {
     margin: 0.85rem 0 0;
     padding: 0;
     list-style: none;
-    font: 500 0.8125rem/1.6 ui-monospace, monospace;
+    color: var(--ink);
+    font: 500 0.8125rem/1.2 ui-monospace, monospace;
 }
 
 .project-stack li {
-    padding: 0.15rem 0.7rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-block-size: 2em;
+    padding: 0 0.7rem 0.1em;
+    border: 1px solid var(--rose);
     border-radius: 999px;
-    background-color: color-mix(in srgb, var(--cream), var(--pink) 14%);
+    background-color: #f8cfe1;
 }
 
 @media (max-width: 36rem) {
